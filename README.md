@@ -47,8 +47,12 @@ python -m http.server 8899
 Then open:
 
 ```text
-http://localhost:8899/tree-axelar-bridge/
+http://localhost:8899/
 ```
+
+## Netlify
+
+This repo is ready for a static Netlify deploy. The `netlify.toml` file publishes the repo root.
 
 ## Production notes
 
@@ -57,11 +61,3 @@ http://localhost:8899/tree-axelar-bridge/
 - Once a BNB-side TREE token address and liquidity venue are confirmed, add those destination details to the route panel and project-lane cards.
 - Keep the "test small first" copy visible for launch.
 - The page does not connect wallets, ask for seed phrases, or custody funds.
-
-## Design reference
-
-The generated concept used for this pass is saved at:
-
-```text
-design/bridge-console-concept.png
-```
