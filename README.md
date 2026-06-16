@@ -1,6 +1,6 @@
 # TREE Axelar Bridge Frontend
 
-This is a static TREE bridge console for the Sui to BNB Chain Axelar route.
+This repo contains a static TREE bridge frontend for the Sui to BNB Chain Axelar route.
 
 It does not custody funds or sign transactions. The final transfer step opens the official Axelar route:
 
@@ -11,28 +11,17 @@ https://interchain.axelar.dev/sui/0x6c5a609f6d0288523ce4a6ed87d19ae127f62073ab75
 ## What it does
 
 - Shows the TREE on Sui to BNB Chain route.
+- Includes the TreeToken logo and hero artwork directly in `index.html` for a single-file static deploy.
 - Validates a BNB destination wallet address.
 - Lets users prepare and copy a transfer note.
-- Saves recent transfer plans in local browser storage.
 - Keeps a readiness checklist for small-test, destination, and gas checks.
 - Gives BNB project lanes for liquidity, app payments, rewards, and holder access.
-- Uses `assets/treetoken-logo.webp` for the header, favicon, route token label, and token identity panel.
-- Uses `assets/tree-hero-city.jpg` as the top hero artwork.
 
 ## Configuration
 
-Edit `config.js` when the route or destination details change:
+The public page is self-contained in `index.html`.
 
-```js
-window.TREE_BRIDGE_CONFIG = {
-  sourceTokenType: "...",
-  officialAxelarRoute: "...",
-  destinationTokenAddress: "",
-  destinationLiquidityVenue: "",
-};
-```
-
-`bridge-config.json` contains the same values in a plain data format for developer handoffs or deployment pipelines.
+`bridge-config.json` and `config.js` keep the same route values in developer-friendly formats for a fuller app pass or future build pipeline.
 
 ## Local use
 
@@ -59,5 +48,5 @@ This repo is ready for a static Netlify deploy. The `netlify.toml` file publishe
 - Keep Axelar as the execution surface unless Axelar confirms an official embeddable widget or SDK flow for this route.
 - Do not iframe `interchain.axelar.dev` unless Axelar explicitly supports it for this page.
 - Once a BNB-side TREE token address and liquidity venue are confirmed, add those destination details to the route panel and project-lane cards.
-- Keep the "test small first" copy visible for launch.
+- Keep the test-small-first copy visible for launch.
 - The page does not connect wallets, ask for seed phrases, or custody funds.
