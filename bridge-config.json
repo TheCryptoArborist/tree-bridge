@@ -1,0 +1,17 @@
+{
+  "projectName": "TREE Bridge",
+  "sourceChain": "Sui",
+  "destinationChain": "BNB Chain",
+  "logoAsset": "assets/treetoken-logo.webp",
+  "heroAsset": "assets/tree-hero-city.jpg",
+  "sourceTokenLabel": "TREE on Sui",
+  "sourceTokenType": "0x6c5a609f6d0288523ce4a6ed87d19ae127f62073ab75fd9b0b1c9b455d4895cf::tree::TREE",
+  "officialAxelarRoute": "https://interchain.axelar.dev/sui/0x6c5a609f6d0288523ce4a6ed87d19ae127f62073ab75fd9b0b1c9b455d4895cf::tree::TREE",
+  "destinationTokenAddress": "",
+  "destinationLiquidityVenue": "",
+  "launchNotes": [
+    "Keep the official Axelar route as the execution surface.",
+    "Test with a small amount before project funding, liquidity moves, or public campaigns.",
+    "Add the BNB-side token address and liquidity venue after they are confirmed."
+  ]
+}
